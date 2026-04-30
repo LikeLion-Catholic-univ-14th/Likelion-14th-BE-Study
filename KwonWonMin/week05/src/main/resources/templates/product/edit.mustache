@@ -1,0 +1,8 @@
+{{#productDTO}}
+<form action="/products/{{id}}/update" method="post">
+    Name: <input type="text" name="productName" value="{{productName}}">
+    Price: <input type="text" name="price" value="{{price}}">
+
+    <button type="submit">Update</button>
+</form>
+{{/productDTO}}

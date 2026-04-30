@@ -1,0 +1,23 @@
+<h1>Product List</h1>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    {{#products}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{productName}}</td>
+        <td>{{price}}</td>
+        <td>
+            <a href="/products/{{id}}">View</a>
+            <a href="/products/{{id}}/edit">Edit</a>
+            <a href="/products/{{id}}/delete">Delete</a>
+        </td>
+    </tr>
+
+    {{/products}}
+</table>
+<a href="/products/new">Create New Products</a>
