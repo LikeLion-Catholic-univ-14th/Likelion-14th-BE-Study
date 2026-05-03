@@ -1,0 +1,12 @@
+{{#product}}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{productName}}</h5>
+            <p class="card-text">가격: {{price}}원</p>
+
+            <a href="/products/edit/{{id}}" class="btn btn-primary">수정하기</a>
+            <a href="/products/delete/{{id}}" class="btn btn-danger">삭제하기</a>
+            <a href="/products" class="btn btn-secondary">목록으로</a>
+        </div>
+    </div>
+{{/product}}
