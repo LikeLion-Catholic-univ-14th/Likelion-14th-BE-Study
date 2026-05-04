@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 수정</title>
+</head>
+<body>
+<h2>상품 수정</h2>
+{{#product}}
+    <form action="/products/edit/{{id}}" method="post">
+        <div>
+            <label>상품명</label>
+            <input type="text" name="productName" value="{{productName}}">
+        </div>
+        <div>
+            <label>가격</label>
+            <input type="number" name="price" value="{{price}}">
+        </div>
+
+        <button type="submit">Update (수정 완료)</button>
+        <a href="/products"><button type="button">Cancel (취소)</button></a>
+    </form>
+{{/product}}
+</body>
+</html>
