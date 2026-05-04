@@ -1,0 +1,32 @@
+<h1>Create New Product</h1>
+
+<!--
+action="/products/create"
+폼을 제출하면 /products/create 주소로 요청을 보냄
+
+method="post"
+데이터를 생성할 때는 POST 사용
+-->
+<form action="/products/create" method="post">
+
+    <label>Product Name:</label>
+
+    <!--
+    name="productName"
+    DTO의 필드명 productName과 같아야 자동으로 값이 들어감
+    -->
+    <input type="text" name="productName" required>
+
+    <label>Price:</label>
+
+    <!--
+    name="price"
+    DTO의 필드명 price와 같아야 함
+    -->
+    <input type="number" name="price" required>
+
+    <button type="submit">Save</button>
+</form>
+
+<a href="/products">Back to List</a>
+
