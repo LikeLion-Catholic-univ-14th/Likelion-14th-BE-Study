@@ -1,0 +1,9 @@
+<h1>Edit Product</h1>
+<form action="/products/{{product.id}}/update" method="post">
+    <label>Product Name:</label>
+    <input type="text" name="productName" value="{{product.productName}}" required>
+    <label>Price:</label>
+    <input type="number" name="price" value="{{product.price}}" required>
+    <button type="submit">Update</button>
+</form>
+<a href="/products">Back to List</a>
