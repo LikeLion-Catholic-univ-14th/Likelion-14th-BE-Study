@@ -1,0 +1,25 @@
+<h1>Product List</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    {{#products}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{productName}}</td>
+            <td>{{price}}</td>
+            <td>
+                <a href="/products/{{id}}">View</a>
+                <a href="/products/{{id}}/edit">Edit</a>
+                <form action="/products/{{id}}/delete" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/products}}
+
+</table>
+<a href="/products/new">Create New Product</a>
