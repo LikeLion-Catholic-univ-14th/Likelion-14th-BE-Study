@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 목록</title>
+</head>
+<body>
+<h2>상품 목록</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>상품명</th>
+        <th>가격</th>
+        <th>관리</th>
+    </tr>
+    <!-- 리스트 반복 출력 -->
+    {{#products}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/products/{{id}}">{{productName}}</a></td>
+            <td>{{price}}</td>
+            <td>
+                <!-- Edit 버튼 (GET 방식 이동) -->
+                <a href="/products/edit/{{id}}"><button>Edit</button></a>
+
+                <!-- Delete 버튼 (POST 방식 요청) -->
+                <form action="/products/delete/{{id}}" method="post" style="display:inline;">
+                    <!-- 자바스크립트로 한 번 더 확인창을 띄워 실수를 방지합니다 -->
+                    <button type="submit" onclick="return confirm('정말로 삭제하시겠습니까?');">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {{/products}}
+</table>
+<br>
+<a href="/products/new"><button>새 상품 등록</button></a>
+</body>
+</html>
